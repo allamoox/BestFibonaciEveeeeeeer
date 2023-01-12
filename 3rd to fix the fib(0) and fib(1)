@@ -1,0 +1,27 @@
+<?php
+
+function fib(int $max)
+{
+	$fn = 0;
+	$sn = 1;
+	$result = [0,1];	
+	if ($max == 0 ){
+		
+		return [0];
+	}
+	elseif ($max==1){
+		
+		return($result);
+	}
+	else;
+		for ($i = 0; $i < $max; $i++)
+	{
+		$temp = $fn + $sn;
+		$fn = $sn;
+		$sn = $temp;
+		# array_push($result,$temp);
+		$result[] = $temp;
+	}
+	return $result;
+}
+print_r(fib(1));
